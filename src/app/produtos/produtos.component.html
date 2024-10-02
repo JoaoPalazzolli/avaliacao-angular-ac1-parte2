@@ -1,0 +1,27 @@
+<div class="container">
+    <h2>Lista de Produtos</h2>
+
+    <div *ngIf="produtos.length === 0" class="alert alert-warning">
+        Nenhum produto disponível no momento
+    </div>
+
+    <div *ngIf="todosForaDeEstoque()" class="alert alert-warning">
+        Todos os produtos estão fora de estoque no momento.
+    </div>
+
+    <div *ngIf="produtos.length > 0" class="row">
+        <div class="col-md-4" *ngFor="let produto of produtos">
+            <div class="card my-3">
+                <div class="card-body">
+                    <h5 class="card-title">{{ produto.nome }}</h5>
+                    <p class="card-text">{{ produto.descricao }}</p>
+                    <p><strong>Preço:</strong> R$ {{ produto.preco }}</p>
+                    <button class="btn" [ngClass]="produto.emEstoque ? 'btn-success' : 'btn-secondary'"
+                        [disabled]="!produto.emEstoque">
+                        {{ produto.emEstoque ? 'Comprar' : 'Indisponível' }}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

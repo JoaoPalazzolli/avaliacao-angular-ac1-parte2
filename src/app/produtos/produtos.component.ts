@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class ProdutosComponent {
   produtos = [
-    { nome: 'Produto 1', preco: 100, descricao: 'Descrição do Produto 1', emEstoque: false },
-    { nome: 'Produto 2', preco: 200, descricao: 'Descrição do Produto 2', emEstoque: false },
-    { nome: 'Produto 3', preco: 300, descricao: 'Descrição do Produto 3', emEstoque: false }
+    { nome: 'Playstation 5', preco: 5000, descricao: 'Videogame super potente', emEstoque: true },
+    { nome: 'Geladeira', preco: 2500, descricao: 'Geladeira super econômica', emEstoque: false },
+    { nome: 'Notebook', preco: 1500, descricao: 'Notebook gamer ultima geração', emEstoque: false }
   ];
 
   todosForaDeEstoque(): boolean {

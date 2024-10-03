@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ProdutosComponent {
   produtos: any = [
-    { nome: 'Playstation 5', preco: 5000, descricao: 'Videogame super potente', emEstoque: false },
+    { nome: 'Playstation 5', preco: 5000, descricao: 'Videogame super potente', emEstoque: true },
     { nome: 'Geladeira', preco: 2500, descricao: 'Geladeira super econômica', emEstoque: false },
     { nome: 'Notebook', preco: 1500, descricao: 'Notebook gamer ultima geração', emEstoque: false }
   ];

@@ -12,7 +12,7 @@ export class ProdutosComponent {
     { nome: 'Notebook', preco: 1500, descricao: 'Notebook gamer ultima geração', emEstoque: false }
   ];
 
-  todosForaDeEstoque(): boolean {
+  itensForaEstoque(): boolean {
     return this.produtos.length > 0 && this.produtos.every(produto => !produto.emEstoque);
   }
 }

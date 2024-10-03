@@ -1,12 +1,8 @@
 <div class="container">
     <h2>Lista de Produtos</h2>
 
-    <div *ngIf="produtos.length === 0" class="alert alert-warning">
-        Nenhum produto disponível no momento
-    </div>
-
-    <div *ngIf="todosForaDeEstoque()" class="alert alert-warning">
-        Todos os produtos estão fora de estoque no momento.
+    <div *ngIf="itensForaEstoque() || produtos.length === 0" class="alert alert-warning">
+        Todos os nossos produtos estão esgotados no momento.
     </div>
 
     <div *ngIf="produtos.length > 0" class="row">
